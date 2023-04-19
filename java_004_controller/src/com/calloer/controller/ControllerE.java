@@ -17,7 +17,7 @@ public class ControllerE {
 				System.out.println(n1+":");
 				System.out.println(i+"로 나누면 나머지");
 				System.out.println(n1%i);
-				System.out.println(i+"이 수는 소수가 아님");
+				System.out.println("이 수는 소수가 아님");
 			//반복문을 수행하여 연산을 실행하는 과정에서
 				//소수가 아님을 판별하면 더이상 반복문을
 				//진행할 필요가 없으니 여기서 중단
