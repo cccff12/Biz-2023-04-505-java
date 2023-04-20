@@ -11,7 +11,7 @@ public class ControllerD {
 					break;
 				}
 			}
-			if (i >= ran) {
+			if (i == ran) {
 				System.out.printf("%d은 소수이다\n", ran);
 			} else {
 				System.out.printf("%d은 소수가 아니다\n", ran);

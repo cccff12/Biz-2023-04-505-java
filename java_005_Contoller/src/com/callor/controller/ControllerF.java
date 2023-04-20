@@ -15,7 +15,8 @@ public class ControllerF {
 		int i = 0;
 		for (i = 2; i < ran; i++) {
 			if (ran % i == 0) {
-				break;
+				//break;
+				return false;
 			}
 		}
 
