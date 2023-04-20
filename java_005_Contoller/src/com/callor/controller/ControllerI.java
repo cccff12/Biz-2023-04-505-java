@@ -1,6 +1,6 @@
 package com.callor.controller;
 
-public class ControllerH {
+public class ControllerI {
 
 	public static boolean prime(int ran) {
 		// int ran = (int) (Math.random() * 50) + 51;
