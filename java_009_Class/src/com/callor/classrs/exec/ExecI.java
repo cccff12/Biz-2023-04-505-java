@@ -9,16 +9,14 @@ public class ExecI {
 			num[i] = (int) (Math.random() * 50) + 51;
 		}
 		int lastnum = 0;
-/*
- * lastindex 초기화를 0으로 실행할 경우 만약 배열에 담긴 값 중에 3의 배수가 하나도 없을 경우 
- * lastindex는 0이 될 것이고 결과 출력에서 0의 index와 index0의 요소값이 출력된다
- * 이러한 논리적인 문제를 해결하기위해 lastindex를 -1로 초기화 하고 결과 출력 부분에서 lastindex의 값을 
- * 한번더 검사할 필요가 있다.
- * 
- * 어차피 3의 배수면 for 문 안에서 i로 초기화 될 것이니 영향은 없다.
- */
-		
-		
+		/*
+		 * lastindex 초기화를 0으로 실행할 경우 만약 배열에 담긴 값 중에 3의 배수가 하나도 없을 경우 lastindex는 0이 될 것이고
+		 * 결과 출력에서 0의 index와 index0의 요소값이 출력된다 이러한 논리적인 문제를 해결하기위해 lastindex를 -1로 초기화 하고
+		 * 결과 출력 부분에서 lastindex의 값을 한번더 검사할 필요가 있다.
+		 * 
+		 * 어차피 3의 배수면 for 문 안에서 i로 초기화 될 것이니 영향은 없다.
+		 */
+
 		int lastindex = 0;
 		for (int i = 0; i < num.length; i++) {
 			if (num[i] % 3 == 0) {
@@ -27,8 +25,26 @@ public class ExecI {
 			}
 		}
 
-		System.out.println("마지막 값은 : "+lastnum);
-		System.out.println("마지막 index는: "+lastindex);
+		System.out.println("마지막 값은 : " + lastnum);
+		System.out.println("마지막 index는: " + lastindex);
+
+		
+		
+		// index 시작값: nums.length=50
+		// index 종료값: index>0 조건이 있어서 index 1일 경우에 for() 종료
+		//49...0까지 index값을 생성해야 하는데
+//여기의 코드는 50...1까지 생성이 된다
+		//이를 해결할려면 nums[50]요소의 값을 읽으려고 시도할 것이다. 
+		// index out of bounds오류 발생
+		//그걸 위해 
+//		for (int index = num.length; index > 0; index--) {에서 밑으로 바꿔야 한다.
+			for (int index = num.length-1; index > 0; index--) {
+if(num[index]%3==0) {
+	System.out.println("마지막 3의 배수 : "+num[index]);
+	System.out.println("위치 : "+index);
+}
+		}
+
 	}
 }
 
@@ -37,6 +53,3 @@ public class ExecI {
 // 두번째 for문 전에 변수값 2개를 지정해준다 그리고 2번째 for문의 if문 안에서 3의 배수로 조건을 맞추고 
 // 누적이 아니라 변수=num[i], 변수=i 를 하면 마지막 값이 그대로 저장되어 나온다. 이때 변수에 마지막 값을 저장 
 // 안한다면 for문의 끝남과 동시에 삭제가 되니 변수에 저장하여 출력해야 한다
-
-
-

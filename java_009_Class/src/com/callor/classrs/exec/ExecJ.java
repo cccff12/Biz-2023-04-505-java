@@ -32,20 +32,21 @@ public class ExecJ {
 			if (prime(nums[i]) > 0) {
 				fnum = nums[i];
 				findex = i;
-				System.out.println("첫번째 프라임: " + fnum);
-				System.out.println("첫번째 인덱스: " + findex);
-				break;
-
+				
+				break;				
 			}
 
 		}
-
+		System.out.println("첫번째 프라임: " + fnum);
+		System.out.println("첫번째 인덱스: " + findex);
+		
+		
 		for (int i = 0; i < nums.length; i++) {
 			if (prime(nums[i]) > 0) {
 				lnum = nums[i];
 				lindex = i;
 			}
-
+			
 		}
 		System.out.println("마지막 프라임: " + lnum);
 		System.out.println("마지막 인덱스: " + lindex);
