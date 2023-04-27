@@ -10,10 +10,10 @@ public class oneday {
 		servicea ser = new servicea();
 //ScoreDto 타입을 score 라는 이름으로 10개의 배열을 설정
 		ScoreDto[] score = new ScoreDto[10];
-//nums라는 이름으로 10개의 배열을 설정 
+//={};에 표시된 요소들을 기본값으로 nums배열 생성하기
 		String[] nums = { "23001", "23002", "23003", "23004", "23005", 
 				"23006", "23007", "23008", "23009", "23010" };
-// for()문으로 score배열을 전부 ScoreDto로 초기화
+// nums배열의 요소만큼 scores배열 요소를 생성하고 싶다
 		for (int i = 0; i < score.length; i++) {
 			score[i] = new ScoreDto();
 		}
