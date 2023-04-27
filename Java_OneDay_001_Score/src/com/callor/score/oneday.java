@@ -6,9 +6,9 @@ import scoreDto.ScoreDto;
 public class oneday {
 
 	public static void main(String[] args) {
-// servicea 메서드를 호출해 ser라는 이름으로 설정
+// servicea 클래스에 선언된 메서드를 사용하기 위해 객체변수 생성
 		servicea ser = new servicea();
-//ScoreDto 타입을 score 라는 이름으로 10개의 배열을 설정
+//ScoreDto 타입을 score 라는 이름으로 10개의 배열을 초기화
 		ScoreDto[] score = new ScoreDto[10];
 //={};에 표시된 요소들을 기본값으로 nums배열 생성하기
 		String[] nums = { "23001", "23002", "23003", "23004", "23005", 
