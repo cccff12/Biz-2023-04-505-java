@@ -3,15 +3,15 @@ package com.callor.classrs.arrays;
 import com.callor.classrs.Service.ScoreServiceA;
 import com.callor.classrs.model.ScoreDto;
 
-public class HomeWork {
+public class HomeWork2 {
 
 	public static void main(String[] args) {
 
 		ScoreDto[] scores = new ScoreDto[10];
-
+// Dto를 타입취급해 배열초기화
 		for (int index = 0; index < scores.length; index++) {
 			scores[index] = new ScoreDto();
-		}
+		}//  
 
 		ScoreServiceA scoreService = new ScoreServiceA();
 		scores[0].stNum = "0001";
