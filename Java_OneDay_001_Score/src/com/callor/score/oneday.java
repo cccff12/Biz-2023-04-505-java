@@ -7,12 +7,12 @@ public class oneday {
 
 	public static void main(String[] args) {
 
-		// 매서드 servicea 를 불러와 설정
 		servicea ser = new servicea();
 
 		ScoreDto[] score = new ScoreDto[10];
 
-		String[] nums = { "23001", "23002", "23003", "23004", "23005", "23006", "23007", "23008", "23009", "23010" };
+		String[] nums = { "23001", "23002", "23003", "23004", "23005", 
+				"23006", "23007", "23008", "23009", "23010" };
 
 		for (int i = 0; i < score.length; i++) {
 			score[i] = new ScoreDto();
@@ -44,7 +44,8 @@ public class oneday {
 		float mathavg = (float) mathall / 10;
 		float musicavg = (float) musicall / 10;
 		float artavg = (float) artall / 10;
-		float allavg = (float) (koravg + engavg + mathavg + musicavg + artavg) / 5;
+		float allavg = (float) (koravg + engavg + mathavg +
+				musicavg + artavg) / 5;
 
 		System.out.println("=".repeat(80));
 		System.out.println("* 한울 고교 성적 리스트 *");
@@ -55,8 +56,10 @@ public class oneday {
 			ser.print(score[i]);
 		}
 		System.out.println("-".repeat(80));
-		System.out.printf("총점\t%d\t%d\t%d\t%d\t%d\t%d\n", korall, engall, mathall, musicall, artall, all);
-		System.out.printf("평균\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t\t%.2f\n", koravg, engavg, mathavg, musicavg, artavg,
+		System.out.printf("총점\t%d\t%d\t%d\t%d\t%d\t%d\n", 
+				korall, engall, mathall, musicall, artall, all);
+		System.out.printf("평균\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t\t%.2f\n",
+				koravg, engavg, mathavg, musicavg, artavg,
 				allavg);
 		System.out.println("=".repeat(80));
 

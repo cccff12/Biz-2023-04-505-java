@@ -1,4 +1,4 @@
-package method;
+package com.callor.score;
 
 import scoreDto.ScoreDto;
 
