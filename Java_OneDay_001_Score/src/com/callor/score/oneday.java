@@ -59,10 +59,10 @@ public class oneday {
 		for (int i = 0; i < score.length; i++) {
 			ser.print(score[i]);
 		}
+		
+		System.out.println("-".repeat(80));
 		ser.addprint(korall, engall, mathall, musicall, artall, all);
 		ser.avgprint(koravg, engavg, mathavg, musicavg, artavg, allavg);
-		System.out.println("-".repeat(80));
-		
 		System.out.println("=".repeat(80));
 
 	}
