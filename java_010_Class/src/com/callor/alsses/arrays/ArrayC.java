@@ -32,6 +32,22 @@ public class ArrayC {
 
 		}
 
+		for (int i = 0; i < lottos.length; i++) {
+			for (int ii = i + 1; ii < lottos.length; ii++) {
+				if (lottos[i] > lottos[ii]) {
+					int tmp = lottos[ii];
+					lottos[ii] = lottos[i];
+					lottos[i] = tmp;
+
+				}
+			}
+
+		}
+		System.out.println();
+		for (int i = 0; i < lottos.length; i++) {
+			System.out.printf("%d\t", lottos[i]);
+		}
+
 		for (int out = 0; out < lottos.length; out++) {
 			for (int in = out + 1; in < lottos.length; in++) {
 				if (lottos[out] > lottos[in]) {
@@ -44,6 +60,7 @@ public class ArrayC {
 			}
 
 		}
+		System.out.println();
 		for (int i = 0; i < lottos.length; i++) {
 			System.out.printf("%2d\t", lottos[i]);
 
