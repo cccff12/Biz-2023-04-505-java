@@ -17,9 +17,17 @@ public class ScoreExecV1 {
 		// ScoreService 클래스의 scoreList객체 배열변수에 
 		// 생성된 (선언과 초기화가 완료된) scoreList 객체 배열값을
 		// 세팅하는 절차
-		scService.setScoreList(scoreList);
+		
 		// 점수 생성하기
 		scService.scoreRndMake();
+		
+		
+		
+		/*
+		 * ScoreService 의 scoreList 객체 배열을 public 으로 하지않고 private 로 선언한다.
+		 * 코드 어디엔가
+		 */
+		
 		//점수 리스트 생성하기
 		scService.scoreListPrint();
 		scService.scoreTotalPrint();

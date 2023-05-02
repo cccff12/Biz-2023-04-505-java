@@ -35,6 +35,11 @@ public class ScoreServiceV1 {
 	 * 2. 다른곳에서 전달받은 scoreList 변수의 값을
 	 * 		this.scoreList 변수에 할당하기
 	 */
+	
+	/*
+	 * private 접근제한자가 선언된 method 이  method는 같은 클래스 
+	 * 
+	 */
 	public void setScoreList(ScoreDto[] scoreList) {
 		this.scoreList = scoreList;
 	}
