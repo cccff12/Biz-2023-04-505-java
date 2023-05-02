@@ -1,7 +1,11 @@
 package com.callor.Classes;
 
 import java.util.Scanner;
-
+/*
+ * 두 개의 정수를 입력받아 두 정수의 4칙연산 결과를 출력하기
+ * 이 연산을 무한반복 하다 
+ * 입력한 값이 -1이면 반복문을 즉시 중단하기
+ */
 public class ClassG {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
