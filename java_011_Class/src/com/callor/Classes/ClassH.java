@@ -14,29 +14,27 @@ public class ClassH {
 
 			System.out.print("정수 1 입력 : ");
 			num1 = scan.nextInt();
-			
-		
-		System.out.print("정수 2 입력 : ");
 
-		num2 = scan.nextInt();
-		if(num1<0) {
-			System.out.printf("덧셈: %d + %d =%d\n", num1, num2, num1 + num2);
-			System.out.printf("뺄셈: %d - %d =%d\n", num1, num2, num1 - num2);
-			System.out.printf("곱셈: %d * %d =%d\n", num1, num2, num1 * num2);
-			System.out.printf("나눗셈: %d / %d =%d\n\n", num1, num2, num1 / num2);
-			
-			continue;
-		}
-		
-		if(num2<0) {
-			System.out.printf("덧셈: %d + %d =%d\n", num1, num2, num1 + num2);
-			System.out.printf("뺄셈: %d - %d =%d\n", num1, num2, num1 - num2);
-			System.out.printf("곱셈: %d * %d =%d\n", num1, num2, num1 * num2);
-			System.out.printf("나눗셈: %d / %d =%d\n\n", num1, num2, num1 / num2);
-			continue;
-		}
-		
-		
+			System.out.print("정수 2 입력 : ");
+
+			num2 = scan.nextInt();
+			if (num1 < 0) {
+				System.out.printf("덧셈: %d + %d =%d\n", num1, num2, num1 + num2);
+				System.out.printf("뺄셈: %d - %d =%d\n", num1, num2, num1 - num2);
+				System.out.printf("곱셈: %d * %d =%d\n", num1, num2, num1 * num2);
+				System.out.printf("나눗셈: %d / %d =%d\n\n", num1, num2, num1 / num2);
+
+				continue;
+			}
+
+			if (num2 < 0) {
+				System.out.printf("덧셈: %d + %d =%d\n", num1, num2, num1 + num2);
+				System.out.printf("뺄셈: %d - %d =%d\n", num1, num2, num1 - num2);
+				System.out.printf("곱셈: %d * %d =%d\n", num1, num2, num1 * num2);
+				System.out.printf("나눗셈: %d / %d =%d\n\n", num1, num2, num1 / num2);
+				continue;
+			}
+
 			System.out.printf("덧셈: %d + %d =%d\n", num1, num2, num1 + num2);
 			System.out.printf("뺄셈: %d - %d =%d\n", num1, num2, num1 - num2);
 			System.out.printf("곱셈: %d * %d =%d\n", num1, num2, num1 * num2);
@@ -45,7 +43,4 @@ public class ClassH {
 		}
 	}
 
-		
-	}
-
-
+}
