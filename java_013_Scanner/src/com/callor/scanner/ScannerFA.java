@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import javax.print.DocFlavor.STRING;
 
-public class ScannerF {
+public class ScannerFA {
 
 	public static void main(String[] args) {
 
