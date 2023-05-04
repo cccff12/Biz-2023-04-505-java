@@ -25,16 +25,15 @@ public class ScannerFA {
 			System.out.println(rndNum);
 			int searchindex;
 			// 배열에 중복되는 값이 있는지 검사
-			for (searchindex = 0; searchindex < nums.length; searchindex++) {
-				if (nums[searchindex] == rndNum) {
-					break;
-				}
+			 for(int i=0;i<nums.length;i++) {
+				 if(nums[i]==rndNum) {
+					 rndNum=(int)(Math.random()*45)+1;
+					 i= -1;
 			} // for
 
 			// rndNum 에 저장된 값이 nums요소에 있으면 다시 while() 처음으로
 			// 검사결과 없으면 for가 끝난 다음에 나옴
-			if (searchindex < nums.length) {
-				break;
+			 
 			} // if
 
 			// 여기에 도달하면 rndNum는 중복되지 않은 랜덤수
