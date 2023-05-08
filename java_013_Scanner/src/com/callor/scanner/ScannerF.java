@@ -66,6 +66,8 @@ public class ScannerF {
 
 				}
 				System.out.println(publicConfig.sLine);
+				
+				
 				if (intNum < 0 || intNum > 45) {
 					System.out.println("1~45범위의 정수만 입력하라");
 				} else if (rndNum == intNum) {

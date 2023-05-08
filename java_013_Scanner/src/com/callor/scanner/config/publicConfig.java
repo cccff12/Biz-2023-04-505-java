@@ -23,5 +23,32 @@ public class publicConfig {
 	public static String sLine="-".repeat(60);
 	
 	
+	/*
+	 * 클래스method 
+	 * 프로젝트가 시작될떄 자동으로 메모리에 loading되어
+	 * 사용할 준비가 완료되는 method
+	 * PublicConfig.dLine(100);
+	 * 
+	 */
+	
+	public static String dLine(int length) {
+		return "=".repeat(length);
+	}
+	public static String sLine(int length) {
+		return "=".repeat(length);
+	}
+	
+	/*
+	 * 클래스에 포함된 변수 method에 static 키워드를 추가할수 있다
+	 * 원래는 이러한 변수,, method를 정적변수, 정적메서드 라고 한다
+	 * 프로젝트가 시작될때 준비되어  언제든지 사용할수 있도록 준비되는 도구들
+	 * 사용할때는 클래스명. 변수, 클래스면. 메서드()와 같이 직접 클래스 이름을
+	 * 통하여 접근한다.
+	 * 
+	 * 
+	 */
+	 
+	
+	
 	
 }
