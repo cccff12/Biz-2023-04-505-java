@@ -5,16 +5,25 @@ public class AnimalDto {
 private	String anName;
 private	String anKind;
 private	String anAge;
+private int number;
 
-
+public int getNumber() {
+	return number;
+}
+public void setNumber(int number) {
+	this.number = number;
+}
 public AnimalDto() { // 기본생성자
 	super();
 }
-public AnimalDto(String anName, String anKind, String anAge) { // 임의생성자
+public AnimalDto(String anName, String anKind, String anAge, 
+		int number) { // 임의생성자
 	super();
 	this.anName = anName;
 	this.anKind = anKind;
 	this.anAge = anAge;
+	this.number= number;
+
 }
 public String getAnName() { 
 	return anName;
@@ -36,7 +45,7 @@ public void setAnAge(String anAge) {
 }
 @Override
 public String toString() {
-	return "AnimalDto [anName=" + anName + ", anKind=" + anKind + ", anAge=" + anAge + "]";
+	return "AnimalDto [anName=" + anName + ", anKind=" + anKind + ", anAge=" + anAge + ", number=" + number + "]";
 }
 	
 	

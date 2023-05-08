@@ -52,6 +52,17 @@ public class ScoreServiceV1 {
 		}
 
 	}
+	
+	public void prit(List<ScoreDto> list) {//ScoreDto type의 객체변수 list
+		for(int i=0;i<list.size();i++) {
+		System.out.print(list.get(i).getScKor());
+		
+		
+		
+		}
+		
+	}
+	
 
 //	scList 데이터를 총점을 기준으로 오름차순 정렬하기
 //	scList 의 객체 데이터에서 getTotal() 값을 기준으로 비교하고
