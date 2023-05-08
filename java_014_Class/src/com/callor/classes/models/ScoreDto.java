@@ -48,6 +48,15 @@ public class ScoreDto {
 	public void setScArt(int scArt) {
 		this.scArt = scArt;
 	}
+	
+	
+	public int getTotal(){
+		int total= this.scKor;
+		total+=this.scArt;
+		total+=this.scMath;
+		total+=this.scMusic;
+				return total;
+	}
 	/*
 	 * java의 모든 클래스는 기본적으로 toString()method를 포함하고 있다.
 	 * 하지만 기본 toString()은 메모리 주소를 보여주는 코드가 포함된다

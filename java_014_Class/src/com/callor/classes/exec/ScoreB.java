@@ -18,9 +18,6 @@ public class ScoreB {
 		scService.makeScore(scList);
 		// System.out.println(scList.toString());
 		//scService.printScore(scList);
-		int num1=100;
-		int num2=200;
-		
 		// scService의 add() method에게 변수값 전달하기
 //		num1, num2에 저장된 값이 전달된다, 
 //		변수가 전달되는게 아니다.
