@@ -1,36 +1,37 @@
 package com.callor.classes.models;
 
 public class ScoreDto {
-
-	private String stName;
+	
+	private String stNum;
 	private int scKor;
 	private int scEng;
 	private int scMath;
+	private int scMusic;
+	private int scArt;
+	private int scSoftWare;
+	private int scDataBase;
 	
-	public ScoreDto(String stName, int scKor, int scEng, int scMath) { //임의생성자
+	public ScoreDto(String stNum, int scKor, int scEng, int scMath, int scMusic, int scArt, int scSoftWare,
+			int scDataBase) {
 		super();
-		this.stName = stName;
+		this.stNum = stNum;
 		this.scKor = scKor;
 		this.scEng = scEng;
 		this.scMath = scMath;
+		this.scMusic = scMusic;
+		this.scArt = scArt;
+		this.scSoftWare = scSoftWare;
+		this.scDataBase = scDataBase;
 	}
-	
-	
-	public ScoreDto() { // 기본생성자
+	public ScoreDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
-
-
-
-
-	public String getStName() {
-		return stName;
+	public String getStNum() {
+		return stNum;
 	}
-	public void setStName(String stName) {
-		this.stName = stName;
+	public void setStNum(String stNum) {
+		this.stNum = stNum;
 	}
 	public int getScKor() {
 		return scKor;
@@ -50,15 +51,38 @@ public class ScoreDto {
 	public void setScMath(int scMath) {
 		this.scMath = scMath;
 	}
+	public int getScMusic() {
+		return scMusic;
+	}
+	public void setScMusic(int scMusic) {
+		this.scMusic = scMusic;
+	}
+	public int getScArt() {
+		return scArt;
+	}
+	public void setScArt(int scArt) {
+		this.scArt = scArt;
+	}
+	public int getScSoftWare() {
+		return scSoftWare;
+	}
+	public void setScSoftWare(int scSoftWare) {
+		this.scSoftWare = scSoftWare;
+	}
+	public int getScDataBase() {
+		return scDataBase;
+	}
+	public void setScDataBase(int scDataBase) {
+		this.scDataBase = scDataBase;
+	}
 	@Override
 	public String toString() {
-		return "ScoreDto [stName=" + stName + ", scKor=" + scKor + ", scEng=" + scEng + ", scMath=" + scMath + "]";
+		return "ScoreDto [stNum=" + stNum + ", scKor=" + scKor + ", scEng=" + scEng + ", scMath=" + scMath
+				+ ", scMusic=" + scMusic + ", scArt=" + scArt + ", scSoftWare=" + scSoftWare + ", scDataBase="
+				+ scDataBase + "]";
 	}
 	
 	
 	
-	
-	
-	
-	
+
 }

@@ -30,7 +30,6 @@ scService.makeScore(scoreList);
 //makescore를 호출하면서
 //method를 호출하면서 scoreList라는 데이터가 담긴 
 // 객체변수의 기억장치 주소를 전달하고 return 된 결과를 result변수에 저장
-int result = scService.makeScore(scoreList);		
 	
 	
 	}
