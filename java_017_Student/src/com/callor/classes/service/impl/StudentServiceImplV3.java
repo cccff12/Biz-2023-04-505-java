@@ -52,6 +52,9 @@ public class StudentServiceImplV3 implements StudentService {
 			stDto.stDep = student[DataIndex.STUDENT.ST_DEPT];
 			stDto.Grade = Integer.valueOf(student[DataIndex.STUDENT.ST_GRADE]);
 			stDto.stAddress = student[DataIndex.STUDENT.ST_ADDRESS];
+		
+			stdList.add(stDto);
+		
 		}
 	}
 

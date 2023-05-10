@@ -10,12 +10,10 @@ public class StudentExecB {
 	public static void main(String[] args) {
 
 		String studentFile = "src/com/callor/classes/datas/student.csv";
-		String saveFile = "src/com/callor/classes/datas/student-save.csv";
 //	객체를 선언만 할때 null값을 저장하여 초기화를 하면
 //		객체때문에 발생하는 메모리 관련 문제를 조금 줄일 수 있다.
 		Scanner fileScan = null;
 //		inputstream is= new fileinputsream(studentfile)
-
 		/*
 		 * InputStream 도구 컴퓨터의 외부로부터 데이터를 메모리로 load하는데 사용하는 도구들의 부모
 		 */
