@@ -70,9 +70,6 @@ public class AuthoeServiceImplV1 implements AuthorService {
 	}
 
 	public List<AuthorDto> getAuthorList() {
-		for (AuthorDto dto : list) {
-			return list;
-		}
-		return null;
+		return this.list;
 	}
 }
