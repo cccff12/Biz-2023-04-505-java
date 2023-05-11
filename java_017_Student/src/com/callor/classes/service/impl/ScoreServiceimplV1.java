@@ -24,52 +24,6 @@ public class ScoreServiceimplV1 implements ScoreService {
 		scList = new ArrayList<>();
 	}
 
-//  성적정보 문자열 1개를 컴마로 분해하고 scoreDto객체로 변환하여 return 하는 method
-	protected ScoreDto str2Dto(String str) {
-
-		String[] score = str.split(",");
-		ScoreDto scDto = new ScoreDto(score[DataIndex.SCORE.ST_NUM], 
-				Integer.valueOf(score[DataIndex.SCORE.SC_KOR]),
-				Integer.valueOf(score[DataIndex.SCORE.SC_ENG]), 
-				Integer.valueOf(score[DataIndex.SCORE.SC_MATH]),
-				Integer.valueOf(score[DataIndex.SCORE.SC_MUSIC]), 
-				Integer.valueOf(score[DataIndex.SCORE.SC_ART]),
-				Integer.valueOf(score[DataIndex.SCORE.SC_SOFTWARE]),
-				Integer.valueOf(score[DataIndex.SCORE.SC_DATABASE]));
-
-		return scDto;
-	}
-
-	public void loadScore() {
-		for (String str : DataSource.SCORE) {
-			ScoreDto scDto = str2Dto(str);
-			scList.add(scDto);
-		}
-	}
-
-	// public void loadScore() {
-// DataSource의 SCORE를 한 줄씩(한줄이 그냥 문자열 1개니까)밑에 반복문으로 돌린다.
-// 그리고 다음 줄 
-
-//	 		for(String str : DataSource.SCORE) {
-//			String[] score = str.split(",");
-//	 		ScoreDto scDto = new ScoreDto(
-//					score[DataIndex.SCORE.ST_NUM],
-//					Integer.valueOf(score[DataIndex.SCORE.SC_KOR]),
-//					Integer.valueOf(score[DataIndex.SCORE.SC_ENG]),
-//					Integer.valueOf(score[DataIndex.SCORE.SC_MATH]),
-//					Integer.valueOf(score[DataIndex.SCORE.SC_MUSIC]),
-//					Integer.valueOf(score[DataIndex.SCORE.SC_ART]),
-//					Integer.valueOf(score[DataIndex.SCORE.SC_SOFTWARE]),
-//					Integer.valueOf(score[DataIndex.SCORE.SC_DATABASE])
-//			);
-
-//		
-//		ScoreDto scDto = str2Dto(str);
-//			scList.add(scDto);
-//		
-//	}
-	@Override
 	public void printScore() {
 		// TODO Auto-generated method stub
 		StudentService stService = new StudentServiceimplV1();
@@ -98,4 +52,49 @@ public class ScoreServiceimplV1 implements ScoreService {
 			System.out.print(dto.getScDataBase() + "\n");
 		}
 	}
+
+//  성적정보 문자열 1개를 컴마로 분해하고 scoreDto객체로 변환하여 return 하는 method
+	protected ScoreDto str2Dto(String str) {
+
+		String[] score = str.split(",");
+		ScoreDto scDto = new ScoreDto(score[DataIndex.SCORE.ST_NUM], 
+				Integer.valueOf(score[DataIndex.SCORE.SC_KOR]),
+				Integer.valueOf(score[DataIndex.SCORE.SC_ENG]), 
+				Integer.valueOf(score[DataIndex.SCORE.SC_MATH]),
+				Integer.valueOf(score[DataIndex.SCORE.SC_MUSIC]), 
+				Integer.valueOf(score[DataIndex.SCORE.SC_ART]),
+				Integer.valueOf(score[DataIndex.SCORE.SC_SOFTWARE]),
+				Integer.valueOf(score[DataIndex.SCORE.SC_DATABASE]));
+		return scDto;
+	}
+
+	public void loadScore() {
+		for (String str : DataSource.SCORE) {
+			ScoreDto scDto = str2Dto(str);
+			scList.add(scDto);
+		}
+	}
+
+	// public void loadScore() {
+// DataSource의 SCORE를 한 줄씩(한줄이 그냥 문자열 1개니까)밑에 반복문으로 돌린다.
+// 그리고 다음 줄 
+
+//	 		for(String str : DataSource.SCORE) {
+//			String[] score = str.split(",");
+//	 		ScoreDto scDto = new ScoreDto(
+//					score[DataIndex.SCORE.ST_NUM],
+//					Integer.valueOf(score[DataIndex.SCORE.SC_KOR]),
+//					Integer.valueOf(score[DataIndex.SCORE.SC_ENG]),
+//					Integer.valueOf(score[DataIndex.SCORE.SC_MATH]),
+//					Integer.valueOf(score[DataIndex.SCORE.SC_MUSIC]),
+//					Integer.valueOf(score[DataIndex.SCORE.SC_ART]),
+//					Integer.valueOf(score[DataIndex.SCORE.SC_SOFTWARE]),
+//					Integer.valueOf(score[DataIndex.SCORE.SC_DATABASE])
+//			);
+//		
+//		ScoreDto scDto = str2Dto(str);
+//			scList.add(scDto);
+//		
+//	}
+
 }

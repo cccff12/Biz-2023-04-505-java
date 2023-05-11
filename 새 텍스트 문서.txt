@@ -14,3 +14,28 @@
 			sdto.setScMath((int)(Math.random()*50)+51);
 			list.add(sdto);
 		}
+
+		배열은 새로 선언하면 기존의 배열은 사라지고 새로 만들어진다
+
+interface
+
+		interface에서 만들어진 메서드는 그걸을 implement하는 클래스에게 interface에서 사용한 메서드를
+		무조건 같게 사용해야하는 강제성을 가진다. 
+
+
+.split
+
+		// 문자열변수(문자열데이터).split("구분자")
+		// 문자열 변수에 저장된 문자열을 "구분자" 로 구분하여
+		//	문자열 배열로 생성해주는 method
+		String[] student= StdData.STUDENT[0].split(",");
+	
+
+		java 프로젝트 16  impl 패키지 StudentServiceimplV1 클래스 다시
+
+
+확장된for
+
+		for(type a:score){
+		
+		}
