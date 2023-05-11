@@ -80,8 +80,6 @@ public class BookServiceImplV2 implements BookService {
 			}else {
 				System.out.printf("%-20s\t",book.getbTitle());
 			}
-			
-			
 			System.out.printf("%s\t", book.getbPublisher());
 			System.out.printf("%s\t", book.getbAuthor());
 			System.out.printf("%s\t", book.getbPublishDate());

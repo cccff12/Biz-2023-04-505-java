@@ -7,17 +7,6 @@ public class AuthorDto {
 	private String auTel;
 	private String auAddress;
 	
-	public AuthorDto() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public AuthorDto(String auCode, String auName, String auTel, String auAdress) {
-		super();
-		this.auCode = auCode;
-		this.auName = auName;
-		this.auTel = auTel;
-		this.auAdress = auAdress;
-	}
 	public String getAuCode() {
 		return auCode;
 	}
@@ -36,16 +25,29 @@ public class AuthorDto {
 	public void setAuTel(String auTel) {
 		this.auTel = auTel;
 	}
-	public String getAuAdress() {
-		return auAdress;
+	public String getAuAddress() {
+		return auAddress;
 	}
-	public void setAuAdress(String auAdress) {
-		this.auAdress = auAdress;
+	public void setAuAddress(String auAddress) {
+		this.auAddress = auAddress;
 	}
 	@Override
 	public String toString() {
-		return "AuthorDto [auCode=" + auCode + ", auName=" + auName + ", auTel=" + auTel + ", auAdress=" + auAdress
+		return "AuthorDto [auCode=" + auCode + ", auName=" + auName + ", auTel=" + auTel + ", auAddress=" + auAddress
 				+ "]";
 	}
+	public AuthorDto(String auCode, String auName, String auTel, String auAddress) {
+		super();
+		this.auCode = auCode;
+		this.auName = auName;
+		this.auTel = auTel;
+		this.auAddress = auAddress;
+	}
+	public AuthorDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
 	
 }
