@@ -1,4 +1,4 @@
-package com.callor.Books.service;
+package com.callor.Books.service.Impl;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.callor.Books.models.BookDto;
+import com.callor.Books.service.BookService;
 
 public class BookServiceImplV1 implements BookService {
 
