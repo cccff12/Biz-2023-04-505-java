@@ -17,7 +17,7 @@ public class t3 {
 		for (int i = 2; i < numList.size(); i++) {
 			if (numList.get(i) % i != 0) {
 				++num;
-				sum += num;
+				sum += numList.get(i);
 			}
 		}
 		System.out.println("소수의 개수 : " + num);

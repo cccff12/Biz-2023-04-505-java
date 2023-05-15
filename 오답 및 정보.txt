@@ -59,6 +59,15 @@ try catch문
 			코드가 중단되는 것을 막기 위해 try문이 실행이 안된다면 catch문이 실행되게 한다.
 			catch문은 그에 대한 경고 문장과 rey
 
+Scanner		사용법: scan.nextline();- 문자열에 사용, 어떤 값을 입력하게 한다.
+				 , scan.hasnext()- 거짓이 될때까지, 	while문의 조건에 쓴다. 
 
+			Scanner scan = new Scanner(); 이렇게 scan객체를 생성하고 
+			
+
+
+
+			저장하고 싶은 값에 저장하면 된다
+			예를 들면 Dto를 선언 하고 stDto= scan.nextline(); 이렇게 한다던지
 
 
