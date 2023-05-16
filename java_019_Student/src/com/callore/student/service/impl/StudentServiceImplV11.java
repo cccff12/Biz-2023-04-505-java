@@ -12,12 +12,10 @@ public class StudentServiceImplV11 implements StudentService {
 
 	protected List<StudentDto> stdList;
 	protected Scanner scan;
-//SS
 	public StudentServiceImplV11() {
 		stdList = new ArrayList<>();
 		scan = new Scanner(System.in);
 	}
-//SSS
 	/*
 	 * insertStudent() 는 StudentService interface 에 정의되지 않은 method
 	 * 

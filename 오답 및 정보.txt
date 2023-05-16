@@ -3,6 +3,7 @@ setter
 getter	 
 		저장된 데이터를 읽는것 
 
+
 이거 해석해보기:
 	ScoreDto sdto;
 	List<ScoreDto> list= new ArrayList();
@@ -104,4 +105,15 @@ outputstream
 			를 통해 try문을 열고
 			데이터를 담고  out.close로 닫는다
 			이떄 os도 닫는데 에러 뜨면 add catch to surrounding try를 누르면 캐치문 하나가 더 입력된다.
+
+
+객체형변환
+			((매서드가 들어있는 클래스 이름) 메인에서 생성한 클래스 객체 이름).클래스의 매서드();
+
+
+
+
+
+			5.16
+			코드 실행 순서 - scan.nextline 전에 안내하는 말을 넣어야 하는데 뒤에 넣음
 		 	
