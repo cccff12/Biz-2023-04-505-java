@@ -1,6 +1,7 @@
 package com.callor.bank.models;
 
 /*
+고객ID	  	문자열  	buId
 계좌번호	문자열(10)	acNum
 거래구분	문자열		acDiv
 입금		정수형		acInput
@@ -14,6 +15,7 @@ package com.callor.bank.models;
 
 public class AccDto {
 
+	public String buId;
 	public String acNum;
 	public String acDiv;
 	public int acInput;
@@ -23,12 +25,13 @@ public class AccDto {
 
 	@Override
 	public String toString() {
-		return "AccDto [acNum=" + acNum + ", acDiv=" + acDiv + ", acInput=" + acInput + ", acOutput=" + acOutput
-				+ ", acDate=" + acDate + ", acTime=" + acTime + "]";
+		return "AccDto [buId=" + buId + ", acNum=" + acNum + ", acDiv=" + acDiv + ", acInput=" + acInput + ", acOutput="
+				+ acOutput + ", acDate=" + acDate + ", acTime=" + acTime + "]";
 	}
 
-	public AccDto(String acNum, String acDiv, int acInput, int acOutput, String acDate, String acTime) {
+	public AccDto(String buId, String acNum, String acDiv, int acInput, int acOutput, String acDate, String acTime) {
 		super();
+		this.buId = buId;
 		this.acNum = acNum;
 		this.acDiv = acDiv;
 		this.acInput = acInput;
