@@ -1,5 +1,6 @@
 package com.callor.bank.service.impl;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,7 +31,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 
 	@Override
 	public BuyerDto getBuyer(String buId) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -122,5 +122,11 @@ public class BuyerServiceImplV1 implements BuyerService {
 		
 		
 	}// inputBuyer 끝
+
+	@Override
+	public void printBuyerList(PrintWriter out) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

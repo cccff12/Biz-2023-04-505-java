@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.callor.bank.models.AccDto;
 import com.callor.bank.models.BuyerDto;
 import com.callor.bank.service.BuyerService;
 import com.callor.bank.utils.Config;
@@ -31,7 +32,7 @@ public class BuyerServiceImplV1A implements BuyerService {
 
 		String str = "src/com/callor/bank/datas/Buyer.txt";
 		InputStream is = null;
-		Scanner scan= null;
+		Scanner scan = null;
 		try {
 			is = new FileInputStream(str);
 		} catch (FileNotFoundException e) {
@@ -80,15 +81,25 @@ public class BuyerServiceImplV1A implements BuyerService {
 
 	}
 
-	@Override
+	
 	public BuyerDto getBuyer(String buId) {
-		// TODO Auto-generated method stub
+		if (buyerList.isEmpty()) {
+			loadBuyer();
+
+		}
+		for (BuyerDto dto : buyerList) {
+			if (dto.buId.equals(buId)) {
+				return dto;
+			}
+
+		}
 		return null;
 	}
 
 	/*
 	 * 현재 buyerList 에 저장된 요소들을 탐색하여 고객ID 가 가장 큰 값을 갖는 요소를 찾아서 고객ID + 1 의 값을 return
 	 */
+
 	protected int getMaxId() {
 
 		int maxId = 0;
@@ -158,21 +169,21 @@ public class BuyerServiceImplV1A implements BuyerService {
 			return null;
 		if (buTel.equals(""))
 			buTel = buDto.buTel;
-		
-		
+
 		System.out.printf("주소(%s) >> ", buDto == null ? "신규" : buDto.buAddr);
 		String buAddr = scan.nextLine();
 		if (buAddr.equals("QUIT"))
 			return null;
-		if (buAddr.equals(""))buAddr= buDto.buAddr;
-		
-		
+		if (buAddr.equals(""))
+			buAddr = buDto.buAddr;
+
 		System.out.printf("생년월일(%s) >> ", buDto == null ? "신규" : buDto.buBirth);
 		String buBirth = scan.nextLine();
 		if (buBirth.equals("QUIT"))
 			return null;
-		if (buAddr.equals(""))buAddr= buDto.buAddr;
-		
+		if (buAddr.equals(""))
+			buAddr = buDto.buAddr;
+
 		System.out.printf("직업(%s) >> ", buDto == null ? "신규" : buDto.buJob);
 		String buJob = scan.nextLine();
 		if (buJob.equals("QUIT"))
