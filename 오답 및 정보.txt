@@ -78,6 +78,9 @@ List<>
 			 ****	만약 list를 출력하고 싶다면
 			 확장 for를 사용해라 ****
 
+			 contain
+			 System.out.println(pitches.contains("142")); 리스트 안에 142가 들어 있다면 true 아니면 falce로 판별한다
+
 
 inputstream 
 
@@ -111,6 +114,15 @@ outputstream
 			((매서드가 들어있는 클래스 이름) 메인에서 생성한 클래스 객체 이름).클래스의 매서드();
 
 
+
+날짜 입력코드
+			Date date = new Date(System.currentTimeMillis()); // 시간 값을 데이터한테 보내서 시간 객체를 만듬
+			SimpleDateFormat todayFormat = new SimpleDateFormat("YYYY-MM-dd");
+			String todayString = todayFormat.format(date);
+
+			Date클래스와 SimpleDateFormat클래스 사용후
+			String 클래스로 문자열 하나 만들고 SimpleDateFormat클래스의 변수명.format(Date클래스의 변수명)을 적어줌
+			즉 String str= todayFormat.format(date); 가 
 
 
 

@@ -21,11 +21,11 @@ public class AccServiceImplV1A implements AccService {
 	protected Scanner scan;
 
 	public AccServiceImplV1A() {
-
 		accList = new ArrayList<>();
 		buyerService = new BuyerServiceImplV1A();
 		scan = new Scanner(System.in);
 	}
+	
 //	새로운 계좌번호 자동 생성
 	/*
 	 * 계좌번호 format 1000-2023-05-18-0001
@@ -47,28 +47,22 @@ public class AccServiceImplV1A implements AccService {
 		int maxNum = 0;
 		String numBank = "1000";
 		for (AccDto accDto : accList) {
-
 //			1000-2023-05-18-0001
 //			1000-2023-05-18-0002
 //			1000-2023-05-18-0003
 //			1000-2023-05-18-0004
 //			1000-2023-05-18-0005
-
 			String accNum = accDto.acNum;
-
 //			처음의 4 글자를 잘라서 bank코드 추출하기
 			numBank = accNum.substring(0, 4);
-
 //			날짜 부분 추출하기
 			String numDate = accNum.substring(5, todayString.length());
-
 			if (numDate != null && numDate.equals(todayString)) {
 //				일련번호 부분만 추출하기
 				String lastNum = accNum.substring(numBank.length() + todayString.length());
 				int intNum = Integer.valueOf(lastNum);
 				if (maxNum > intNum)
 					maxNum = intNum;
-
 			}
 
 		} // end for
