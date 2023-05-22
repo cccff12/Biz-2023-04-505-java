@@ -125,7 +125,26 @@ outputstream
 			즉 String str= todayFormat.format(date); 가 
 
 
+.contains()		
+			 contains() 함수는 대상 문자열에 특정 문자열이 포함되어 있는지 확인하는 함수이다. - 대/소문자를 구분한다.
+
+
+
+isEmpty
+
+			isEmpty() 메소드는 문자열이 빈 값이면 true, 비어있지 않으면 false를 리턴하는 메소드입니다
+
 
 			5.16
 			코드 실행 순서 - scan.nextline 전에 안내하는 말을 넣어야 하는데 뒤에 넣음
-		 	
+
+
+전역변수		
+			한 클래스 안에서 설정한 변수
+			예를 들어 private int num 같은거 
+			이 변수는 한 클래스 내에서는 메인과 메서드안에서는 따로 설정할 필요 없이
+			얼마든지 같이 사용 가능
+
+
+
+패키지 이름은 언제나 3단계. com. 이름. 프로젝트 이름		
