@@ -19,4 +19,22 @@ public class DBContract {
 		public static final int BUJOB = 6;
 	}
 
+	
+	public static class ACC {
+		public static final int AC_NUM = 1;
+		public static final int AC_DIV = 2;
+		public static final int AC_BUID = 3;
+		public static final int AC_BALANCE = 4;
+	
+	}
+	
+	
+	public static String[] ACC_DIV = {
+			"입출금계좌", "적금졔좌","대출계좌"
+	};
+	
+	
+	
+	
+	
 }
