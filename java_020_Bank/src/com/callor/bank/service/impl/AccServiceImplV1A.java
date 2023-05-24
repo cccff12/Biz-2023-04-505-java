@@ -64,7 +64,6 @@ public class AccServiceImplV1A implements AccService {
 				if (maxNum > intNum)
 					maxNum = intNum;
 			}
-
 		} // end for
 //	maxnum은 0 또는 최대값
 		String newNum = String.format("%s-%s-%04d", numBank, todayString, maxNum + 1);

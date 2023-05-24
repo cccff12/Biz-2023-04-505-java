@@ -1,5 +1,7 @@
 package com.callor.bank.service;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Scanner;
 
@@ -117,7 +119,6 @@ public class BankService {
 			}
 			System.out.println(buyerDto.toString());
 			System.out.printf("고객Id : %s\n", buyerDto.buId);
-
 			System.out.printf("고객이름(%s)", buyerDto.buName);
 			String strBuName = scan.nextLine();
 			if (!strBuName.equals(""))
@@ -136,18 +137,16 @@ public class BankService {
 
 			break;
 		}
-
 	}
 
 	public void findUserinfo() {
-		
 		printBuyerList(); // 출력할 리스트
 		System.out.println(Line.dLine(100));
 		System.out.println("조회할 고객 id를 입력하세요");
 		System.out.println(" 고객 id>>");
 		String strBuId = scan.nextLine();// 출력
-		
-		BuyerDto buyerDto = buyerService.findById(strBuId);
+		BuyerDto buyerDto = buyerService.findById(strBuId);// BuyerDto 타입의 buyerDto를
+		// buyerService.findById로 초기화
 		if (buyerDto == null) {
 			System.out.println("고객 id가 없습니다");
 			return;
@@ -155,10 +154,9 @@ public class BankService {
 			System.out.printf("고객id %s\t", buyerDto.buId);
 			System.out.printf("이름 %s\t", buyerDto.buName);
 			System.out.printf("전화 %s\t", buyerDto.buTel);
-			System.out.printf("주소 %s\n", buyerDto.buAddr);
+			System.out.printf("주소 %s\n", buyerDto.buAddr);// 만약 있다면 dto를 출력
 		}
 		List<AccDto> accList = accService.findByBuId(strBuId);// 고객 정보 조회
-		
 		if (accList.isEmpty()) {
 			System.out.println("고객의 계좌정보가 없습니다");
 			return;
@@ -184,23 +182,72 @@ public class BankService {
 
 	}
 
-	
-	
-	public void makeAcount() {
-		System.out.println(Line.dLine(100));
-		System.out.println("조회할 고객 id를 입력하세요");
-		System.out.println(" 고객 id>>");
-		String strBuId = scan.nextLine();
-		BuyerDto buyerDto = buyerService.findById(strBuId);
+	public void makeAccount() {
+		
+		
+		System.out.println("고객 id조회");
+		String str= scan.nextLine();
+		BuyerDto buyerDto = buyerService.findById(str);
+		if (buyerDto == null) {
+			System.out.println("고객 id가 없습니다");
+			return;
+		} else {
+			System.out.println("개좌개설 시작");
+			/*
+			 * 계좌번호 만들기 : 날짜 + 일련번호 1. 오늘 날짜의 문자열 만들기 2. 계좌리스트에 오늘 날짜에 해당하는 값이 있는지 검사 있다면
+			 * 일련번호를 추출하여 +1하고 없으면 1로 설정
+			 */
+			Date date = new Date(System.currentTimeMillis());
+			SimpleDateFormat today = new SimpleDateFormat("YYYYMMdd");
+//			오늘 날짜의 문자열 만들기(20230524)
+			String todayString = today.format(date);
+
+//			List<AccDto> accList = accService.selectAll();
+//			int maxNum = 0;
+//			for (AccDto accDto : accList) {
+//				String tempDate = accDto.acNum.substring(0, todayString.length());
+////				오늘 날자와 같은 데이터가 있다면 일련번호 추출
+//				if (tempDate.equals(todayString)) {
+//					String strnum = accDto.acNum.substring(todayString.length());
+//					int intNum = Integer.valueOf(strnum);
+//					if (intNum > maxNum)
+//						maxNum = intNum;
+//				}
+//			}
+//			maxNum++;
+
+			AccDto accdto = new AccDto();
+
+			int maxNum = Integer.valueOf(accService.maxAcNum(todayString)) + 1;
+			String acNum = String.format("%s%02d", todayString, maxNum);
+			System.out.println("계좌번호" + acNum);
+
+			while (true) {
+				System.out.println("1. 입출금계좌, 2. 적금계좌 3. 대출계좌 입력");
+				String scanstr = scan.nextLine();
+				if (scanstr.equals("1")) {
+					accdto.acDiv = scanstr;
+					break;
+				} else if (scanstr.equals("2")) {
+					accdto.acDiv = scanstr;
+					break;
+				} else if (scanstr.equals("3")) {
+					accdto.acDiv = scanstr;
+					break;
+				} else {
+					System.out.println("다시 입력하세요");
+					continue;
+				}
+			}
+			accdto.acBuid= str;
+			accdto.acBalance=10000;
+			accdto.acNum= acNum;
+		}
+		
 		
 		
 		
 		
 		
 	}
-	
-	
-	
-	
-	
 }

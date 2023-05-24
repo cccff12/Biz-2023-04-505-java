@@ -220,7 +220,6 @@ public class BuyerServiceImplV1A implements BuyerService {
 			 * 
 			 * "주소에 대한 개념으로 이해하여 보자"
 			 * 
-			 * 
 			 * List type 객체의 contains method List type 객체(buyerList)의 요소중에 buDto 변수에 담긴 주소를
 			 * 가진 요소가 있냐?
 			 */

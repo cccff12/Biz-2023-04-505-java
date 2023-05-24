@@ -97,23 +97,19 @@ public class BuyerServiceImplV1 implements BuyerService {
 				return result2Dto(result);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
 	}
-
 	@Override
 	public int insert(BuyerDto dto) {
 		String sql = " INSERT INTO tbl_buyer(buid, buname, butel) "
 				+ " VALUES(?,?,?) ";
-
 		try {
 			PreparedStatement pStr = dbConn.prepareStatement(sql);
 			pStr.setString(1, dto.buId);
 			pStr.setString(2, dto.buName);
 			pStr.setString(3, dto.buTel);
-			
 			// sql 로 전달하는 명령대로 DB 를 변경(insert)하라 라는 의미
 			int result = pStr.executeUpdate();
 			return result;
@@ -125,7 +121,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 		return 0;
 	}
 
-	@Override
 	public int update(BuyerDto dto) {
 		
 		String sql = " UPDATE tbl_buyer "
@@ -150,9 +145,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
 		return 0;
 	}
 

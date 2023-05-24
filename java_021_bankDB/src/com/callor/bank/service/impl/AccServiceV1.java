@@ -58,9 +58,7 @@ public class AccServiceV1 implements AccService {
 	@Override
 	public List<AccDto> selectAll() {
 
-		String sql = " SELECT acNum, acDiv,acBuId,acBalance " 
-						+ " FROM tbl_acc " 
-						+ " ORDER BY acNum ";
+		String sql = " SELECT acNum, acDiv,acBuId,acBalance " + " FROM tbl_acc " + " ORDER BY acNum ";
 
 		try {
 			PreparedStatement pStr = dbConn.prepareStatement(sql);
@@ -97,7 +95,22 @@ public class AccServiceV1 implements AccService {
 
 	@Override
 	public int insert(AccDto dto) {
-		// TODO Auto-generated method stub
+		String sql=" INSERT INTO tbl_buyer(acNum, acDiv,acBuId,acBalance) "
+				+ " VALUES(?,?,?,?) ";
+		
+		PreparedStatement pStr;
+		try {
+			pStr= dbConn.prepareStatement(sql);
+			pStr.setString(1, dto.acNum);
+			pStr.setString(2, dto.acDiv);
+			pStr.setString(3, dto.acBuid);
+			pStr.setInt(4, dto.acBalance);
+			int result= pStr.executeUpdate();
+			return result;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 		return 0;
 	}
 
@@ -116,14 +129,11 @@ public class AccServiceV1 implements AccService {
 	@Override
 	public List<AccDto> findByBuId(String acBuId) {
 
-		String sql = " SELECT acNum, acDiv,acBuId,acBalance " 
-				+ " FROM tbl_acc " 
-				+ " WHERE acBuId = ? "
+		String sql = " SELECT acNum, acDiv,acBuId,acBalance " + " FROM tbl_acc " + " WHERE acBuId = ? "
 				+ " ORDER BY acNum ";
-		
+
 		PreparedStatement pStr;
 		try {
-
 			pStr = dbConn.prepareStatement(sql);
 			pStr.setString(1, acBuId);
 			List<AccDto> accList = db2List(pStr);
@@ -134,6 +144,26 @@ public class AccServiceV1 implements AccService {
 			e.printStackTrace();
 		}
 		return null;
+
+	}
+
+	public String maxAcNum(String date) {// 최대값을 찾아서 리턴하는 메서드
+		String sql = " select substr(max(acNum),9) " + " from tbl_acc " + " where substr(acNum,0,8)= ? ";
+
+		try {
+			PreparedStatement pStr = dbConn.prepareStatement(sql);
+			pStr.setString(1, date);
+			ResultSet result = pStr.executeQuery();
+			if (result.next()) {
+				return result.getString(1);
+			} else {
+				return "0";
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "0";
 
 	}
 
