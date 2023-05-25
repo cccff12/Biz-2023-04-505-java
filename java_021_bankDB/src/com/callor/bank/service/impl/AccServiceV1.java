@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.naming.PartialResultException;
+
 import com.callor.bank.config.DBConnection;
 import com.callor.bank.config.DBContract;
 import com.callor.bank.model.AccDto;
@@ -78,8 +80,10 @@ public class AccServiceV1 implements AccService {
 		PreparedStatement pStr;
 		try {
 			pStr = dbConn.prepareStatement(sql);
+			pStr.setString(1, acNum);
 			ResultSet result = pStr.executeQuery();
 
+			
 			if (result.next()) {
 				return result2Dto(result);
 			}
@@ -89,7 +93,6 @@ public class AccServiceV1 implements AccService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return null;
 	}
 
@@ -109,13 +112,34 @@ public class AccServiceV1 implements AccService {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-
 		return 0;
 	}
 
+//	update값은 한번에 다 바꿀 필요 없이 바꾸고자 하는 값과 pk값을 넣으면 된다
+//	
 	@Override
 	public int update(AccDto dto) {
-		// TODO Auto-generated method stub
+
+		String sql = "UPDATE tbl_ACC "
+				+ "	SET ACBALANCE = ? "
+				+"  ACbuid = ?, "
+				+"  ACdiv = ? "
+				+" WHERE ACNUM = ? ";
+	try {
+		PreparedStatement pstr= dbConn.prepareStatement(sql);
+		pstr.setInt(1, dto.acBalance);// 타입과 dto.주의
+		pstr.setString(2, dto.acBuid);
+		pstr.setString(3, dto.acDiv);
+		pstr.setString(4, dto.acNum);
+		int result= pstr.executeUpdate();
+		return result;
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		
+		
+		
 		return 0;
 	}
 

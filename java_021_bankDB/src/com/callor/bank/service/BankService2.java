@@ -14,20 +14,20 @@ import com.callor.bank.service.impl.AccServiceV1;
 import com.callor.bank.service.impl.BuyerServiceImplV1;
 import com.callor.bank.urils.Line;
 
-public class BankService {
+public class BankService2 {
 
 	protected final Scanner scan;
 
 	protected List<BuyerDto> buyerList;
 	protected final BuyerService buyerService;
 	protected final AccService accService;
-	protected final AccListService AccListServiceImplV1;
+	protected final AccListService accListService;
 
-	public BankService() {
+	public BankService2() {
 		buyerService = new BuyerServiceImplV1();
 		scan = new Scanner(System.in);
 		accService = new AccServiceV1();
-		AccListServiceImplV1 = new AccListServiceImplV1();
+		accListService = new AccListServiceImplV1();
 
 	}
 
@@ -249,87 +249,102 @@ public class BankService {
 		}
 	}
 //	
-	
-	
-	
-	public void inserAccList() {
-		printBuyerList();
-		System.out.println("고객 id를 입력하세요");
-		String str = scan.nextLine();
-		List<AccDto> accList = accService.findByBuId(str);
-		if (accList.isEmpty()) {
-			System.out.println("고객의 계좌정보가 없습니다");
-			return;
-		} else {
-			System.out.println("아이디\t계좌번호\t구분\t잔액");
-			for (AccDto accDto : accList) {
-				System.out.print(accDto.acBuid + "\t");
-				System.out.print(accDto.acNum + "\t");
-				System.out.print(accDto.acDiv + "\t");
-				System.out.print(accDto.acBalance + "\n");
-			}
-		}
-		System.out.println("계좌번호 입력");
-		String idstr = scan.nextLine();
-		AccDto acdto = accService.findById(idstr);
-		if (acdto == null) {
-			System.out.println("계좌정보가 없습니다");
 
-		}
-		int inser = 0;
-		int output = 0;
+	public void inserAccList() {
+//		고객정보 확인
+		printBuyerList();
+		findUserinfo();
 
 		while (true) {
-			AccListDto aclistdto = new AccListDto();
 
-			System.out.println("거래구분: 1: 입금, 2. 출금");
-			String numstr = scan.nextLine();
-			if (numstr.equals("1")) {
-				System.out.println("입금액 입력");
-				String inserstr = scan.nextLine();
-				inser = Integer.valueOf(inserstr);
-				acdto.acBalance += inser;
+			System.out.println(Line.sLine(100));
+			System.out.println("입출금 등록");
+			System.out.println(Line.sLine(100));
+			System.out.println("계좌번호 입력");
+			String acNum = scan.nextLine();
 
-			} else if (numstr.equals("2")) {
-				System.out.println("출금액 입력");
-				String outputstr = scan.nextLine();
-				output = Integer.valueOf(outputstr);
-				if (acdto.acBalance < output) {
-					System.out.println("출금불가");
-					return;
-				} else if (acdto.acBalance >= output) {
-					acdto.acBalance -= output;
-				}
-			} else {
-				System.out.println("잘못입력했습니다.");
+			AccDto accDto = accService.findById(acNum);
+			if (accDto == null) {
+				System.out.printf("계좌번호를 확인하세요%s", acNum);
 				continue;
 			}
-			System.out.println("잔액" + acdto.acBalance);
+
+			System.out.println("거래구분 1. 입금 / 2. 출금 / -1. 종료");
+			String aioDiv = scan.nextLine();
+			int intDiv = 0;
+			try {
+				intDiv = Integer.valueOf(aioDiv);
+			} catch (Exception e) {
+				System.out.printf("선택이 잘못되었습니다.", aioDiv);
+				continue;
+			}
+			if (intDiv == -1) {
+				System.out.println("입출금 업무 중단");
+				break;
+			}
+
+			if (intDiv != 1 && intDiv != 2) {
+				System.out.println("입금 출금 중에서 선택하세요");
+				continue;
+			}
+			String[] divs = { "입금", "출금" };
+			int intAmt = 0;
+
+			while (true) {
+				String prompt = divs[intDiv - 1];
+				System.out.printf("%s(quit 는 종료)", prompt);
+				String amount = scan.nextLine();
+				if(amount.equals("quit")) {
+					intAmt=-1;//?
+					break;
+				}
+				try {
+					intAmt = Integer.valueOf(amount);
+				} catch (Exception e) {
+					System.out.printf("%s 금액은 정수로 입력해 주세요", prompt);
+					continue;
+				}
+				
+				if(aioDiv.equals("2")) {
+					int balance= accDto.acBalance;
+					if(balance<intAmt) {
+						System.out.printf("잔액이 부족해요 ㅠㅜ", balance);
+						continue;
+					}
+					
+				}
+				
+				
+				break;
+			}
+			AccListDto ioDto = new AccListDto();
 
 			Date date = new Date(System.currentTimeMillis());
-			System.out.println(date.toString());
-
 			SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
 			SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+			ioDto.aioDate = dateFormat.format(date);
+			ioDto.aioTime = timeFormat.format(date);
 
-			// 날짜 type 의 데이터를 String.format type 의 문자열로 변환하기
-			String dateString = dateFormat.format(date);
-			String timeString = timeFormat.format(date);
+			ioDto.aioDiv = aioDiv;
+			ioDto.acNum=acNum;
+			
+			
 
-			aclistdto.acNum = idstr;
-			aclistdto.aioInput = inser;
-			aclistdto.aioOutput = output;
-			aclistdto.aioDiv = numstr;
-			aclistdto.aioDate = dateString;
-			aclistdto.aioTime = timeString;
-			AccListServiceImplV1.insert(aclistdto);
+			if (aioDiv.equals("1")) {
+				ioDto.aioInput = intAmt;
 
-			int result = accService.update(acdto);
-			if (result > 0)
-				System.out.println("변경 성공");
-			else {
-				System.out.println("변경 실패");
+			} else if (aioDiv.equals("2")) {
+				ioDto.aioOutput = intAmt;
+				intAmt*=-1;
 			}
+			accListService.insert(ioDto);
+			
+			
+			int balance= accDto.acBalance;
+			
+			accDto.acBalance= accDto.acBalance+intAmt;
+			accService.update(accDto);
+			
 		}
 
 	}

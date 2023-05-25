@@ -21,7 +21,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 		// DB 연결을 위한 초기화 된 객체를 가져오기
 		dbConn = DBConnection.getDBConn();
 	}
-
 	
 	protected BuyerDto result2Dto(ResultSet result) {
 		try {
