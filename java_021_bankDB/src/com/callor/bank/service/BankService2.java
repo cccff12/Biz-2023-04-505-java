@@ -262,7 +262,8 @@ public class BankService2 {
 			System.out.println(Line.sLine(100));
 			System.out.println("계좌번호 입력");
 			String acNum = scan.nextLine();
-
+//	 계좌번호를 사용하여 tbl_acc테이블에서 더이터 조회
+//			accDto에는 acNum 계좌번호에 해당하는 데이터가 모두 담긴 상태
 			AccDto accDto = accService.findById(acNum);
 			if (accDto == null) {
 				System.out.printf("계좌번호를 확인하세요%s", acNum);
@@ -294,8 +295,8 @@ public class BankService2 {
 				String prompt = divs[intDiv - 1];
 				System.out.printf("%s(quit 는 종료)", prompt);
 				String amount = scan.nextLine();
-				if(amount.equals("quit")) {
-					intAmt=-1;//?
+				if (amount.equals("quit")) {
+					intAmt = -1;// ?
 					break;
 				}
 				try {
@@ -304,18 +305,18 @@ public class BankService2 {
 					System.out.printf("%s 금액은 정수로 입력해 주세요", prompt);
 					continue;
 				}
-				
-				if(aioDiv.equals("2")) {
-					int balance= accDto.acBalance;
-					if(balance<intAmt) {
+
+				if (aioDiv.equals("2")) {
+					int balance = accDto.acBalance;
+					if (balance < intAmt) {
 						System.out.printf("잔액이 부족해요 ㅠㅜ", balance);
 						continue;
 					}
-					
+
 				}
-				
-				
-				break;
+
+				if (intAmt < 0)
+					break;
 			}
 			AccListDto ioDto = new AccListDto();
 
@@ -326,25 +327,23 @@ public class BankService2 {
 			ioDto.aioTime = timeFormat.format(date);
 
 			ioDto.aioDiv = aioDiv;
-			ioDto.acNum=acNum;
-			
-			
+			ioDto.acNum = acNum;
 
 			if (aioDiv.equals("1")) {
 				ioDto.aioInput = intAmt;
 
 			} else if (aioDiv.equals("2")) {
 				ioDto.aioOutput = intAmt;
-				intAmt*=-1;
+				intAmt *= -1;
 			}
 			accListService.insert(ioDto);
-			
-			
-			int balance= accDto.acBalance;
-			
-			accDto.acBalance= accDto.acBalance+intAmt;
+
+			int balance = accDto.acBalance;
+
+//			다른건 손 안대고 밸런스만 손댐
+			accDto.acBalance = accDto.acBalance + intAmt;
 			accService.update(accDto);
-			
+
 		}
 
 	}
