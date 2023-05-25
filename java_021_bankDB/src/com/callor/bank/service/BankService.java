@@ -183,10 +183,9 @@ public class BankService {
 	}
 
 	public void makeAccount() {
-		
-		
+
 		System.out.println("고객 id조회");
-		String str= scan.nextLine();
+		String str = scan.nextLine();
 		BuyerDto buyerDto = buyerService.findById(str);
 		if (buyerDto == null) {
 			System.out.println("고객 id가 없습니다");
@@ -197,6 +196,7 @@ public class BankService {
 			 * 계좌번호 만들기 : 날짜 + 일련번호 1. 오늘 날짜의 문자열 만들기 2. 계좌리스트에 오늘 날짜에 해당하는 값이 있는지 검사 있다면
 			 * 일련번호를 추출하여 +1하고 없으면 1로 설정
 			 */
+			
 			Date date = new Date(System.currentTimeMillis());
 			SimpleDateFormat today = new SimpleDateFormat("YYYYMMdd");
 //			오늘 날짜의 문자열 만들기(20230524)
@@ -216,11 +216,10 @@ public class BankService {
 //			}
 //			maxNum++;
 
-			AccDto accdto = new AccDto();
-
 			int maxNum = Integer.valueOf(accService.maxAcNum(todayString)) + 1;
 			String acNum = String.format("%s%02d", todayString, maxNum);
 			System.out.println("계좌번호" + acNum);
+			AccDto accdto = new AccDto();
 
 			while (true) {
 				System.out.println("1. 입출금계좌, 2. 적금계좌 3. 대출계좌 입력");
@@ -239,15 +238,63 @@ public class BankService {
 					continue;
 				}
 			}
-			accdto.acBuid= str;
-			accdto.acBalance=10000;
-			accdto.acNum= acNum;
+			accdto.acBuid = str;
+			accdto.acBalance = 10000;
+			accdto.acNum = acNum;
+		}
+	}
+
+	public void inserAccList() {
+		printBuyerList();
+		System.out.println("고객 id를 입력하세요");
+		String str = scan.nextLine();
+		List<AccDto> accList = accService.findByBuId(str);
+		if (accList.isEmpty()) {
+			System.out.println("고객의 계좌정보가 없습니다");
+			return;
+		} else {
+			System.out.println("계좌번호\t구분\t잔액");
+			for (AccDto accDto : accList) {
+				System.out.print(accDto.acNum+"\t");
+				System.out.print(accDto.acDiv+"\t");
+				System.out.print(accDto.acBalance+"\n");
+			}
+		}
+		System.out.println("계좌번호 입력");
+		String idstr= scan.nextLine();
+		AccDto acdto= accService.findById(idstr);
+		if(acdto==null) {
+			System.out.println("계좌정보가 없습니다");
+		}
+		while(true) {
+			System.out.println("거래구분: 1: 입금, 2. 출금");
+			String numstr= scan.nextLine();
+			if(numstr.equals("1")) {
+				System.out.println("입금액 입력");
+				String inserstr= scan.nextLine();
+				
+			}else if(numstr.equals("2")) {
+				System.out.println("출금액 입력");
+				String inserstr= scan.nextLine();
+			}else {
+				System.out.println("잘못입력했습니다.");
+				continue;
+			}
+			Date date = new Date(System.currentTimeMillis());
+			SimpleDateFormat today = new SimpleDateFormat("YYYYMMdd");
+			String todayString = today.format(date);
+			
+			
+			
+			
+			
+			
 		}
 		
-		
-		
+	
 		
 		
 		
 	}
+
 }

@@ -95,22 +95,21 @@ public class AccServiceV1 implements AccService {
 
 	@Override
 	public int insert(AccDto dto) {
-		String sql=" INSERT INTO tbl_buyer(acNum, acDiv,acBuId,acBalance) "
-				+ " VALUES(?,?,?,?) ";
-		
+		String sql = " INSERT INTO tbl_buyer(acNum, acDiv,acBuId,acBalance) " + " VALUES(?,?,?,?) ";
+
 		PreparedStatement pStr;
 		try {
-			pStr= dbConn.prepareStatement(sql);
+			pStr = dbConn.prepareStatement(sql);
 			pStr.setString(1, dto.acNum);
 			pStr.setString(2, dto.acDiv);
 			pStr.setString(3, dto.acBuid);
 			pStr.setInt(4, dto.acBalance);
-			int result= pStr.executeUpdate();
+			int result = pStr.executeUpdate();
 			return result;
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+
 		return 0;
 	}
 
@@ -155,9 +154,12 @@ public class AccServiceV1 implements AccService {
 			pStr.setString(1, date);
 			ResultSet result = pStr.executeQuery();
 			if (result.next()) {
-				return result.getString(1);
-			} else {
-				return "0";
+				String maxNum = result.getString(1);
+				if (maxNum == null) {
+					return "0";
+				} else {
+					return maxNum;
+				}
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
