@@ -61,7 +61,6 @@ public class AccServiceV1 implements AccService {
 	public List<AccDto> selectAll() {
 
 		String sql = " SELECT acNum, acDiv,acBuId,acBalance " + " FROM tbl_acc " + " ORDER BY acNum ";
-
 		try {
 			PreparedStatement pStr = dbConn.prepareStatement(sql);
 			List<AccDto> accList = db2List(pStr);

@@ -1,4 +1,4 @@
-package com.callor.student.config;
+package com.callor.memo.config;
 
 import javax.sql.DataSource;
 
@@ -22,8 +22,7 @@ public class DBConnection {
 				DBContract.USER_NAME,
 				DBContract.PASSWORD
 				);
-//		여러개의 테이블에 대하여 CRUD를 실행할때 타이밍에 
-//		의한 데이터 sync오류 등을 자체적으로 관리하는 도구
+//	데이터 sync오류 등을 자체적으로 관리하는 도구
 	TransactionFactory transactionFactory
 	= new JdbcTransactionFactory();
 		
@@ -34,17 +33,12 @@ public class DBConnection {
 //	환경설정 등을 mybatis 의 Sqlsessionfactory 에게 전달하기 위한 객체
 	Configuration configuration= new Configuration(environment);
 	
-//	 mapper라는 패키지 안의 인터페이스 안에 코드를 읽어서 명령 수행
-//	Dao interface 가 저장되어 있는 package를 지정한다. 
-//	Mybatis 는 Dao interface 파일을 scan하여 
-//  Annotation 으로 설정된 sql명령문과 
-//	각 
-	configuration.addMappers("com.callor.student.mapper");
+
+	configuration.addMappers("com.callor.memo.mapper");
 	
 	
 	sqlSesiFactory = 
 			new SqlSessionFactoryBuilder().build(configuration);
-	
 		
 	}
 	

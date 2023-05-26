@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2023-05-26T04:52:18.840Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="KiZ86Lxt6HO8KJNCjzpJ" version="21.3.2" type="device">
+  <diagram name="페이지-1" id="0sVJdaFj9M4lcXmvj0J6">
+    <mxGraphModel dx="1259" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-1" value="매모" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="790" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-2" value="일련번호" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="570" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-3" value="작성자" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-4" value="작성일자" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-5" value="제목" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="920" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-6" value="내용" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YLDUdEQ-HwjhFE90g5Xl-1" target="YLDUdEQ-HwjhFE90g5Xl-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="869" y="400" as="sourcePoint" />
+            <mxPoint x="830" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YLDUdEQ-HwjhFE90g5Xl-1" target="YLDUdEQ-HwjhFE90g5Xl-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="390" as="sourcePoint" />
+            <mxPoint x="950" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YLDUdEQ-HwjhFE90g5Xl-1" target="YLDUdEQ-HwjhFE90g5Xl-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="370" as="sourcePoint" />
+            <mxPoint x="800" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YLDUdEQ-HwjhFE90g5Xl-1" target="YLDUdEQ-HwjhFE90g5Xl-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="870" y="490" as="sourcePoint" />
+            <mxPoint x="1060" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YLDUdEQ-HwjhFE90g5Xl-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="YLDUdEQ-HwjhFE90g5Xl-1" target="YLDUdEQ-HwjhFE90g5Xl-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="805" y="390" as="sourcePoint" />
+            <mxPoint x="875" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

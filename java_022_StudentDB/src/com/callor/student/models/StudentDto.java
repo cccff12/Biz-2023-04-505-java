@@ -14,7 +14,7 @@ public class StudentDto {
 	public String toString() {
 		return "StudentDto [st_num=" + st_num + ", st_name=" + st_name + ", st_dept=" + st_dept + ", st_grade="
 				+ st_grade + ", st_tel=" + st_tel + "]";
-	}
+	} //여기 생성자가 있어야 바티스가 반응
 	public StudentDto(String st_num, String st_name, String st_dept, int st_grade, String st_tel) {
 		super();
 		this.st_num = st_num;
