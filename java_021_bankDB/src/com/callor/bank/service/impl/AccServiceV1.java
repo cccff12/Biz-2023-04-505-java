@@ -74,7 +74,8 @@ public class AccServiceV1 implements AccService {
 
 	@Override
 	public AccDto findById(String acNum) {
-		String sql = " SELECT acNum, acDiv,acBuId,acBalance " + " FROM tbl_acc " + " WHERE acNum = ? ";
+		String sql = " SELECT acNum, acDiv,acBuId,acBalance " +
+	" FROM tbl_acc " + " WHERE acNum = ? ";
 
 		PreparedStatement pStr;
 		try {
@@ -97,7 +98,9 @@ public class AccServiceV1 implements AccService {
 
 	@Override
 	public int insert(AccDto dto) {
-		String sql = " INSERT INTO tbl_buyer(acNum, acDiv,acBuId,acBalance) " + " VALUES(?,?,?,?) ";
+		String sql = " INSERT INTO tbl_buyer(acNum, acDiv,acBuId,acBalance) " 
+	+
+	" VALUES(?,?,?,?) ";
 
 		PreparedStatement pStr;
 		try {
@@ -158,7 +161,8 @@ public class AccServiceV1 implements AccService {
 	@Override
 	public List<AccDto> findByBuId(String acBuId) {
 
-		String sql = " SELECT acNum, acDiv,acBuId,acBalance " + " FROM tbl_acc " + " WHERE acBuId = ? "
+		String sql = " SELECT acNum, acDiv,acBuId,acBalance " + " FROM tbl_acc "
+		+ " WHERE acBuId = ? "
 				+ " ORDER BY acNum ";
 
 		PreparedStatement pStr;

@@ -22,6 +22,8 @@ public class BuyerServiceImplV1 implements BuyerService {
 		dbConn = DBConnection.getDBConn();
 	}
 	
+	
+	
 	protected BuyerDto result2Dto(ResultSet result) {
 		try {
 			BuyerDto buyerDto = new BuyerDto();
@@ -29,8 +31,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 			buyerDto.buName = result.getString(DBContract.BUYER.BUNAME);
 			buyerDto.buTel = result.getString(DBContract.BUYER.BUTEL);
 			buyerDto.buAddr = result.getString(DBContract.BUYER.BUADDR);
-			buyerDto.buBirth = result.getString(DBContract.BUYER.BUBIRTH);
-			buyerDto.buJob = result.getString(DBContract.BUYER.BUJOB);
 			return buyerDto;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -47,7 +47,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 				+ " buid, buname, butel, buaddr, bubirth, bujob "
 				+ " FROM tbl_buyer "
 				+ " ORDER BY buid ";
-		
 		try {
 			PreparedStatement pStr = dbConn.prepareStatement(sql);
 			ResultSet result = pStr.executeQuery();
@@ -57,7 +56,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 			}
 			return buyerList;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -82,7 +80,6 @@ public class BuyerServiceImplV1 implements BuyerService {
 	 * 
 	 */
 	
-	@Override
 	public BuyerDto findById(String id) {
 		String sql = 
 				" SELECT buid, buname, butel, buaddr, bubirth, bujob "

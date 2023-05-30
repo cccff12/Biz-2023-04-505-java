@@ -1,0 +1,166 @@
+<mxfile host="app.diagrams.net" modified="2023-05-30T01:02:04.592Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="RLw_wgFTl2SELha8ot9_" version="21.3.4" type="device">
+  <diagram name="페이지-1" id="dnvJ9sEM_eNlcpXFwVp2">
+    <mxGraphModel dx="1711" dy="1717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="L6kyxyHsz162og-USBRJ-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-1" target="L6kyxyHsz162og-USBRJ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-1" value="판매내역" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="280" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-35" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-2" target="L6kyxyHsz162og-USBRJ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-2" value="고객정보" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="990" y="660" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-3" target="L6kyxyHsz162og-USBRJ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-3" value="상품정보" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="240" y="640" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-7" value="상품코드" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-8" value="고객ID" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="820" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-10" value="SEQ" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="310" y="420" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-12" value="상품명" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="160" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-14" value="매입단가" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="400" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-15" value="품목" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="280" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-16" value="매출단가" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-17" value="고객이름" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="940" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-18" value="거래일자" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="420" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-19" value="주소" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-20" value="전화번호" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-23" value="거래시각" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="420" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-25" value="고객ID" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="640" y="420" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-26" value="상품코드" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="750" y="420" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-27" value="수량" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="420" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-28" value="판매단가" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="970" y="420" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-3" target="L6kyxyHsz162og-USBRJ-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="193" y="690" as="sourcePoint" />
+            <mxPoint x="110" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-3" target="L6kyxyHsz162og-USBRJ-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="303" y="690" as="sourcePoint" />
+            <mxPoint x="220" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-33" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-3" target="L6kyxyHsz162og-USBRJ-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="690" as="sourcePoint" />
+            <mxPoint x="230" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-34" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-3" target="L6kyxyHsz162og-USBRJ-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="323" y="710" as="sourcePoint" />
+            <mxPoint x="240" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-36" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-2" target="L6kyxyHsz162og-USBRJ-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1016" y="710" as="sourcePoint" />
+            <mxPoint x="1000" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-37" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-2" target="L6kyxyHsz162og-USBRJ-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1026" y="720" as="sourcePoint" />
+            <mxPoint x="1040" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-38" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-2" target="L6kyxyHsz162og-USBRJ-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1036" y="730" as="sourcePoint" />
+            <mxPoint x="1130" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-40" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-1" target="L6kyxyHsz162og-USBRJ-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="329" as="sourcePoint" />
+            <mxPoint x="370" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-41" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-1" target="L6kyxyHsz162og-USBRJ-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="340" as="sourcePoint" />
+            <mxPoint x="380" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-42" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-1" target="L6kyxyHsz162og-USBRJ-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="349" as="sourcePoint" />
+            <mxPoint x="390" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-43" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-1" target="L6kyxyHsz162og-USBRJ-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="359" as="sourcePoint" />
+            <mxPoint x="400" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-44" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-1" target="L6kyxyHsz162og-USBRJ-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="369" as="sourcePoint" />
+            <mxPoint x="410" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-46" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-1" target="L6kyxyHsz162og-USBRJ-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="320" as="sourcePoint" />
+            <mxPoint x="370" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-47" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-3" target="L6kyxyHsz162og-USBRJ-1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="350" y="610" as="sourcePoint" />
+            <mxPoint x="660" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L6kyxyHsz162og-USBRJ-48" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="L6kyxyHsz162og-USBRJ-2" target="L6kyxyHsz162og-USBRJ-1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="580" y="660" as="sourcePoint" />
+            <mxPoint x="910" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
