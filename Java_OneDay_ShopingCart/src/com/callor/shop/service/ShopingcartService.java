@@ -101,6 +101,7 @@ public class ShopingcartService {
 		String stcode;
 		ProductDto prodto;
 		while (true) {
+			
 			stcode = scan.nextLine();
 			if (stcode.equals("QUIT")) {
 				return;
@@ -112,19 +113,19 @@ public class ShopingcartService {
 			}
 			break;
 		}
-
+System.out.println("코드입력");
 		String stpcode = scan.nextLine();
 		if (!stpcode.equals(""))
 			prodto.pCode = stpcode;
-
+		System.out.println("이름입력");
 		String stname = scan.nextLine();
 		if (!stname.equals(""))
 			prodto.pName = stname;
-
+		System.out.println("상품명입력");
 		String stitem = scan.nextLine();
 		if (!stitem.equals(""))
 			prodto.pItem = stitem;
-
+		System.out.println("매입단가입력");
 		String piprice = scan.nextLine();
 		if (!piprice.equals(""))
 			prodto.pIPrice = Integer.valueOf(piprice);

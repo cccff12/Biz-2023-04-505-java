@@ -46,6 +46,7 @@ public class ExecA {
 			} else if (str.equals("4"))
 				shoping.buyerinsert();
 			else if (str.equals("5")) {
+				shoping.shopinglist();
 			} else {
 				System.out.println("업무선택은 1~7까지 중에 선택하세요");
 				continue;
